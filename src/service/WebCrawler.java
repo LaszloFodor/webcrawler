@@ -120,7 +120,7 @@ public class WebCrawler {
             return response.body();
         }
 
-        private List<Link> extractLinks(String content, String baseUrl) throws MalformedURLException, URISyntaxException {
+        private List<Link> extractLinks(String content, String baseUrl) throws URISyntaxException {
             URI baseUri = new URI(baseUrl);
 
             return LINK_PATTERN.matcher(content)
